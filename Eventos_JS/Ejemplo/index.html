@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejecicio de practica de eventos</title>
+    <script src="app.js"></script>
+</head>
+<body>
+    <!-- ejercicio basico con DOM, eventos y funciones -->
+
+    <style>
+        .centrar{
+            display: flex;
+            justify-content: center;
+        }
+
+        #mostrar{
+            margin: 10px;
+            padding: 10px;
+            margin-top: 65px;
+            width: 80px;
+            height: 70px;
+        }
+
+        #datos{
+            width: 250px;
+            float: left;
+            margin: 5px;
+            padding: 5px;
+            border: 2px dashed black;
+        }
+    </style>
+
+    <div class="centrar">
+        <form method="POST" id="formulario" onsubmit="return false;"><!-- Para que no me redireccione -->
+            <p>
+                <label for="">Ingrese su nombre</label><br>
+                <input type="text" id="nombre" placeholder="Nombre">
+                <span id="error"></span>
+            </p>
+    
+            <p>
+                <label for="">Ingrese su apellido</label><br>
+                <input type="text" id="apellido" placeholder="Apellido">
+            </p>
+    
+            <p>
+                <label for="">Ingrese su edad</label><br>
+                <input type="number" id="edad" placeholder="Edad">
+            </p>
+    
+            <p>
+                <input type="submit" value="Enviar datos">
+            </p>
+    
+        </form>
+    
+        <p>
+            <div id="datos">
+                <h4>La informacion es:</h4><hr>
+            </div>
+        </p>
+        <button id="mostrar">Ver datos del formulario</button>
+
+    </div>
+
+</body>
+</html>
