@@ -1,0 +1,12 @@
+<app-videojuego *ngIf="mostrar_videojuegos" ></app-videojuego>
+<app-zapatillas></app-zapatillas>
+
+<div [ngStyle]="{'background': config.color,
+                 'padding': '20px',
+                 'border': '5px solid black'}">
+    <h1>Hola mundo</h1>
+    <p>Aprendiendo angular {{descripcion}}</p>
+    
+    <button (click)="ocultarVideojuegos(false)">Ocultar</button>
+    
+</div>
