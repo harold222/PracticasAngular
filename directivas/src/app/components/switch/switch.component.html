@@ -1,0 +1,18 @@
+<div [ngSwitch]="alerta">
+    <div *ngSwitchCase="'primary'" class="alert alert-primary" role="alert">
+        Valor comparado por switch
+    </div>
+    <div *ngSwitchCase="'success'" class="alert alert-success" role="alert">
+        Valor comparado por switch
+    </div>
+    <div *ngSwitchDefault vclass="alert alert-danger" role="alert">
+        Valor comparado por switch
+    </div>
+    <div *ngSwitchCase="'info'" class="alert alert-info" role="alert">
+        Valor comparado por switch
+    </div>
+</div>
+
+<button (click)="alerta = 'primary'" class="btn btn-outline-dark">
+    Cambiar
+</button>

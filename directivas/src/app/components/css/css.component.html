@@ -1,0 +1,44 @@
+<hr>
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div [ngClass]="estilo" class="alert" role="alert">
+                A simple primary alert—check it out!
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <button class="btn btn-info" (click)="estilo = 'alert-info'">Info</button>
+        </div>
+
+        <div class="col-md-3">
+            <button class="btn btn-success" (click)="estilo = 'alert-success'">success</button>
+        </div>
+
+        <div class="col-md-3">
+            <button class="btn btn-primary" (click)="estilo = 'alert-primary'">primary</button>
+        </div>
+
+        <div class="col-md-3">
+            <button class="btn btn-warning" (click)="estilo = 'alert-warning'">warning</button>
+        </div><br>
+
+        <div [ngClass]="{'text-danger': propiedad.danger, 'text-info' : !propiedad.danger}" class="col">
+            <h3>
+                Lorem ipsum dolor sit amet.
+            </h3>
+            <button (click)="propiedad.danger = !propiedad.danger" class="btn btn-outline-danger">
+                Cambiar
+            </button>
+        </div>
+
+        <div class="col-md-12 mt-5">
+            <button (click)="ejecutar()" class="btn btn-dark" [disabled]="cargando">
+                <i [ngClass]="{'fa-save': !cargando, 'fa-refresh fa-spin': cargando}" class="fa"></i>
+                <span *ngIf="!cargando"> Guardar</span>
+                <span *ngIf="cargando"> Esperando</span>
+            </button>
+        </div>
+
+    </div>
+</div>
